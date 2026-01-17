@@ -104,6 +104,23 @@ export default function Home() {
             className="pointer-events-none w-full object-contain"
           />
 
+          <div className="pointer-events-none absolute inset-0 z-20">
+            <div className="relative h-full w-full">
+              <p className="absolute left-[15%] top-[32%] max-w-[460px] rotate-[-6deg] text-center text-xl font-semibold leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] md:text-2xl">
+                Chúng mình tự hào có sự đồng hành của các chuyên gia da liễu hàng
+                đầu từ Dove. Họ ở đây để đảm bảo cậu luôn sở hữu làn da khỏe mạnh
+                nhất nhờ các phương pháp chăm sóc chuẩn khoa học, sẵn sàng đối diện
+                với mọi thay đổi “khó chiếu” của tuổi dậy thì.
+              </p>
+              <p className="absolute right-[15%] top-[44%] max-w-[460px] rotate-[6deg] text-center text-xl font-semibold leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] md:text-2xl">
+                Không chỉ là một trí tuệ nhân tạo, Olivia được phát triển để trở
+                thành người bạn đồng hành thấu hiểu tâm lý. Olivia luôn túc trực
+                24/7, sẵn sàng lắng nghe không phán xét và giúp cậu gỡ rối những
+                “cuộn len” cảm xúc phức tạp trong đầu.
+              </p>
+            </div>
+          </div>
+
           <div className="absolute inset-0 z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pt-12 text-center md:pt-16">
             <div className="relative w-full max-w-4xl pt-16 md:pt-20">
               <div className="pointer-events-none absolute left-1/2 top-0 translate-x-[calc(-30%-680px)] -translate-y-35">
@@ -165,26 +182,18 @@ export default function Home() {
                   alt="Trò chuyện với Olivia ngay"
                   width={320}
                   height={96}
-                  className="h-14 w-auto md:h-16 scale-[3] translate-y-[400px]"
+                  className="h-14 w-auto md:h-16 scale-[3] translate-y-[800px]"
                 />
               </Link>
             </div>
           </div>
 
           <Image
-            src="/c.png"
-            alt="Bác sĩ"
-            width={420}
-            height={520}
-            className="pointer-events-none absolute bottom-0 left-6 z-20 w-24 md:left-10 md:w-36 lg:w-44 -translate-y-[600px] translate-x-[135px] scale-[3]"
-          />
-
-          <Image
             src="/image-removebg-preview%20(1).png"
             alt="Nhân vật màu xanh lá cây"
             width={360}
             height={360}
-            className="pointer-events-none absolute bottom-0 right-6 z-20 w-24 md:right-10 md:w-36 lg:w-40 -translate-y-[300px] -translate-x-[100px] scale-[4]"
+            className="pointer-events-none absolute bottom-0 right-6 z-20 w-24 md:right-10 md:w-36 lg:w-40 -translate-y-[220px] -translate-x-[100px] scale-[3]"
           />
         </div>
       </section>
