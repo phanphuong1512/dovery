@@ -1,65 +1,193 @@
 import Image from "next/image";
+import Link from "next/link";
+import SiteHeader from "./components/SiteHeader";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-[#fff5f7] text-slate-800">
+      <SiteHeader />
+
+      <section className="relative overflow-hidden bg-(--sky-blue)">
+        <div className="mx-auto max-w-6xl px-6 py-12">
+          <div className="grid grid-cols-1 items-center gap-10 rounded-[36px] bg-white px-8 py-10 shadow-xl shadow-black/20 md:grid-cols-2">
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-md overflow-hidden rounded-[28px] border border-sky-100 bg-white shadow-lg shadow-black/20">
+                <Image
+                  src="/hero-section-dovery.jpg"
+                  alt="Dovery hero section"
+                  width={720}
+                  height={640}
+                  priority
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="text-center text-(--ink-blue) font-source-serif">
+              <p className="text-3xl font-noto-black">Hey girls,</p>
+              <h1 className="mt-3 text-4xl font-semibold text-(--ink-blue) md:text-5xl">
+                Chào mừng cậu đến với Dovery
+              </h1>
+              <p className="mt-5 text-base leading-relaxed font-serif-light-italic">
+                Đây là món quà nhỏ dành tặng riêng cho cậu – những cô gái đang
+                tập lớn, nhạy cảm và xứng đáng được yêu thương nhất trần đời.
+              </p>
+              <p className="mt-5 text-base leading-relaxed font-serif-light-italic">
+                Tuổi dậy thì đôi khi thật rắc rối, say hello với mụn, bye bye
+                tâm trạng vui vẻ, và cả những ngày &ldquo;đèn đỏ&rdquo; khó chiều nữa. Nhưng
+                đừng lo, Dovery và Olivia ở đây để hô biến những ngày ấy trở nên
+                nhẹ nhàng hơn.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className="w-full bg-white py-3">
+          <div className="flex w-full items-center">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/Asset 4.webp"
+              alt="Dovery ribbon"
+              width={900}
+              height={120}
+              sizes="50vw"
+              className="h-auto w-1/2"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <Image
+              src="/Asset 4.webp"
+              alt="Dovery ribbon"
+              width={900}
+              height={120}
+              sizes="50vw"
+              className="h-auto w-1/2"
+            />
+          </div>
         </div>
-      </main>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="mx-auto flex max-w-5xl flex-col items-center px-6 text-center text-(--ink-blue)">
+          <h2 className="text-3xl font-noto-black">
+            Chúng mình hiểu và tôn trọng sự riêng tư
+          </h2>
+          <p className="mt-3 text-base font-serif-light-italic">
+            Biết rằng có những chuyện cậu chỉ muốn giữ cho riêng mình.
+            <br />
+            Vậy nên...
+          </p>
+
+          <div className="relative mt-8 w-full max-w-3xl">
+            <Image
+              src="/Asset 3.webp"
+              alt="Dovery privacy card"
+              width={1200}
+              height={420}
+              className="h-auto w-full"
+            />
+            <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-4 px-8 text-center">
+              <p className="text-xl font-noto-black">Không yêu cầu đăng nhập</p>
+              <p className="text-xl font-noto-black">
+                Không cần cung cấp thông tin cá nhân
+              </p>
+              <p className="text-xl font-noto-black">
+                Nhật ký trò chuyện được mã hóa
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-white">
+        <div className="relative w-full mt-[4cm]">
+          <Image
+            src="/back.webp"
+            alt="back"
+            width={1920}
+            height={1400}
+            className="pointer-events-none w-full object-contain"
+          />
+
+          <div className="absolute inset-0 z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pt-12 text-center md:pt-16">
+            <div className="relative w-full max-w-4xl pt-16 md:pt-20">
+              <div className="pointer-events-none absolute left-1/2 top-0 translate-x-[calc(-30%-680px)] -translate-y-35">
+                <Image
+                  src="/Asset 11.webp"
+                  alt="Lớn lên cùng sự dịu dàng"
+                  width={1200}
+                  height={240}
+                  className="mx-auto h-auto w-[360%] max-w-none -translate-y-[4%]"
+                />
+              </div>
+              <div className="absolute -left-2 top-1/2 -translate-x-52 -translate-y-1/2 md:-left-6">
+                <Image
+                  src="/element1.webp"
+                  alt="Bông hoa"
+                  width={300}
+                  height={300}
+                  className="h-40 w-40 md:h-48 md:w-48 "
+                />
+              </div>
+            </div>
+
+            <div className="mt-24 flex w-full max-w-6xl flex-col gap-6 md:mt-28 md:flex-row">
+              <div className="flex-[1] rounded-[28px] bg-white p-8 text-left shadow-lg shadow-black/20 transition-[flex,transform] duration-300 hover:flex-[1.6] hover:scale-[1.02]">
+                <h3 className="text-3xl font-noto-black text-(--ink-blue)">
+                  Kinh nguyệt là phép màu
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-(--ink-blue)">
+                  Không phải là gánh nặng. Dù nó hơi đau lưng một xíu, nhưng đó
+                  là dấu hiệu cậu đã trở thành một thiếu nữ tuyệt vời.
+                </p>
+              </div>
+
+              <div className="flex-[1] rounded-[28px] bg-white p-8 text-left shadow-lg shadow-black/20 transition-[flex,transform] duration-300 hover:flex-[1.6] hover:scale-[1.02]">
+                <h3 className="text-3xl font-noto-black text-(--ink-blue)">
+                  Không có câu hỏi nào là ngốc nghếch
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-(--ink-blue)">
+                  Dù là chuyện mụn, chuyện lông là, hay chuyện “crush”, Olivia
+                  luôn sẵn sàng lắng nghe mà không phán xét.
+                </p>
+              </div>
+
+              <div className="flex-[1] rounded-[28px] bg-white p-8 text-left shadow-lg shadow-black/20 transition-[flex,transform] duration-300 hover:flex-[1.6] hover:scale-[1.02]">
+                <h3 className="text-3xl font-noto-black text-(--ink-blue)">
+                  Làn da nào cũng đẹp
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-(--ink-blue)">
+                  Mụn dậy thì chỉ là khách ghé chơi, làn da của cậu vẫn luôn đáng
+                  được nâng niu bằng sự dịu nhẹ nhất.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 flex items-center justify-center">
+              <Link href="/olivia" aria-label="Trò chuyện với Olivia ngay">
+                <Image
+                  src="/Asset 5.webp"
+                  alt="Trò chuyện với Olivia ngay"
+                  width={320}
+                  height={96}
+                  className="h-14 w-auto md:h-16"
+                />
+              </Link>
+            </div>
+          </div>
+
+          <Image
+            src="/c.png"
+            alt="Bác sĩ"
+            width={420}
+            height={520}
+            className="pointer-events-none absolute bottom-0 left-6 z-20 w-24 md:left-10 md:w-36 lg:w-44 -translate-y-[600px] translate-x-[135px] scale-[3]"
+          />
+
+          <Image
+            src="/image-removebg-preview%20(1).png"
+            alt="Nhân vật màu xanh lá cây"
+            width={360}
+            height={360}
+            className="pointer-events-none absolute bottom-0 right-6 z-20 w-24 md:right-10 md:w-36 lg:w-40 -translate-y-[300px] -translate-x-[100px] scale-[4]"
+          />
+        </div>
+      </section>
     </div>
   );
 }

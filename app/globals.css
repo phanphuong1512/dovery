@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff5f7;
+  --foreground: #1f2937;
+  --brand-pink: #e91e63;
+  --brand-blue: #90caf9;
+  --ink-blue: #0c4675;
+  --sky-blue: #c2e1fd;
+  --soft-blue: #4e8bc4;
+  --soft-pink: #ffe0ec;
+  --hot-pink: #ff99be;
 }
 
 @theme inline {
@@ -12,15 +19,32 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-source-serif-4), "Source Serif 4", serif;
+}
+
+.font-serif-light-italic {
+  font-family: var(--font-source-serif-4), "Source Serif 4", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.font-source-serif {
+  font-family: var(--font-source-serif-4), "Source Serif 4", serif;
+}
+
+.font-cookie-display {
+  font-family: var(--font-cookie), "Cookie", cursive;
+  font-weight: 400;
+}
+
+.font-noto-black {
+  font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
+  font-weight: 900;
 }
