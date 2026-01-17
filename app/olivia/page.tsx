@@ -59,16 +59,13 @@ export default function OliviaPage() {
     <div className="min-h-screen bg-[#fff5f7] text-slate-800">
       <SiteHeader />
 
-      <div className="mx-auto w-full max-w-5xl px-6 py-10">
-        <div className="flex h-[70vh] flex-col overflow-hidden rounded-[28px] border-2 border-slate-800 bg-[#eadcf6] shadow-xl">
-          <div className="relative bg-[#7ec7e9] px-6 pb-16 pt-6">
-            <div className="mx-auto flex max-w-4xl items-center justify-between">
-          <Link href="/" aria-label="Quay lại" className="flex items-center">
-            <Image src="/back.webp" alt="Quay lại" width={28} height={28} />
-          </Link>
+      <div className="mx-auto w-full max-w-none px-0 py-0">
+        <div className="flex h-[calc(100vh-160px)] max-h-[calc(100vh-160px)] flex-col overflow-hidden border-2 border-white bg-[#eadcf6] shadow-xl">
+          <div className="relative bg-[#7ec7e9] px-6 pb-24 pt-9">
+            <div className="mx-auto flex w-full max-w-4xl items-center justify-center gap-6 text-center">
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90">
-              <Image src="/Asset 6.webp" alt="Olivia" width={40} height={40} />
+              <Image src="/Asset 16.webp" alt="Olivia" width={40} height={40} />
             </div>
             <div className="text-center">
               <p className="text-xl font-extrabold tracking-wide text-slate-900">
@@ -78,6 +75,17 @@ export default function OliviaPage() {
                 Luôn ở đây lắng nghe, không phán xét.
               </p>
             </div>
+
+              <svg
+                viewBox="0 0 1440 120"
+                className="pointer-events-none absolute bottom-0 left-0 w-full translate-y-px"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,70 C120,110 240,30 360,70 C480,110 600,30 720,70 C840,110 960,30 1080,70 C1200,110 1320,30 1440,70 L1440,120 L0,120 Z"
+                  fill="#eadcf6"
+                />
+              </svg>
           </div>
           <button
             type="button"
@@ -88,22 +96,6 @@ export default function OliviaPage() {
           </button>
         </div>
 
-            <svg
-              viewBox="0 0 1440 120"
-              className="pointer-events-none absolute bottom-0 left-0 w-full"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0,70 C120,110 240,30 360,70 C480,110 600,30 720,70 C840,110 960,30 1080,70 C1200,110 1320,30 1440,70 L1440,120 L0,120 Z"
-                fill="#eadcf6"
-              />
-              <path
-                d="M0,70 C120,110 240,30 360,70 C480,110 600,30 720,70 C840,110 960,30 1080,70 C1200,110 1320,30 1440,70"
-                fill="none"
-                stroke="#1f2937"
-                strokeWidth="6"
-              />
-            </svg>
           </div>
 
           <main className="flex flex-1 flex-col gap-6 overflow-y-auto px-6 pb-6 pt-6">
@@ -132,7 +124,7 @@ export default function OliviaPage() {
                   {message.role === "assistant" && (
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
                       <Image
-                        src="/Asset 6.webp"
+                        src="/Asset 16.webp"
                         alt="Olivia"
                         width={28}
                         height={28}
@@ -142,8 +134,8 @@ export default function OliviaPage() {
                   <div
                     className={`max-w-[75%] rounded-3xl border-2 px-4 py-3 text-sm shadow-sm ${
                       message.role === "assistant"
-                        ? "bg-[#e7f6ff] border-slate-800 text-slate-800"
-                        : "bg-[#f8c7cc] border-slate-800 text-slate-800"
+                        ? "bg-[#e7f6ff] border-white text-slate-800"
+                        : "bg-[#f8c7cc] border-white text-slate-800"
                     }`}
                   >
                     {getMessageText(message)}
@@ -159,40 +151,41 @@ export default function OliviaPage() {
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
                     <Image
-                      src="/Asset 6.webp"
+                      src="/Asset 16.webp"
                       alt="Olivia"
                       width={28}
                       height={28}
                     />
                   </div>
-                  <div className="rounded-3xl border-2 border-slate-800 bg-white px-4 py-3 text-sm">
+                  <div className="rounded-3xl border-2 border-white bg-white px-4 py-3 text-sm">
                     Olivia đang nhập...
                   </div>
                 </div>
               )}
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              {quickReplies.map((text) => (
-                <button
-                  key={text}
-                  type="button"
-                  onClick={() => setInput(text)}
-                  className="rounded-full border-2 border-slate-800 bg-[#f6e6b4] px-4 py-2 text-xs font-semibold text-slate-800"
-                >
-                  {text}
-                </button>
-              ))}
-            </div>
           </main>
+
+          <div className="flex flex-wrap justify-center gap-3 bg-[#eadcf6] px-6 py-3">
+            {quickReplies.map((text) => (
+              <button
+                key={text}
+                type="button"
+                onClick={() => setInput(text)}
+                className="rounded-full border-2 border-white bg-[#f6e6b4] px-4 py-2 text-xs font-semibold text-slate-800"
+              >
+                {text}
+              </button>
+            ))}
+          </div>
 
           <form
             onSubmit={handleSubmit}
-            className="flex items-center gap-3 border-t-2 border-slate-800 bg-[#f3c6cd] px-6 py-4"
+            className="flex items-center justify-center gap-3 border-t-2 border-white bg-[#f3c6cd] px-6 py-4"
           >
             <button
               type="button"
-              className="rounded-full border-2 border-slate-800 bg-[#f4dce6] px-4 py-2 text-sm font-semibold"
+              className="rounded-full border-2 border-white bg-[#f4dce6] px-4 py-2 text-sm font-semibold"
             >
               Emoji
             </button>
@@ -200,11 +193,11 @@ export default function OliviaPage() {
               value={input}
               onChange={(event) => setInput(event.target.value)}
               placeholder="Nhập tâm sự của cậu vào đây..."
-              className="flex-1 rounded-full border-2 border-slate-800 bg-white px-4 py-2 text-sm outline-none"
+              className="w-3/5 rounded-full border-2 border-white bg-white px-4 py-2 text-sm outline-none"
             />
             <button
               type="submit"
-              className="rounded-full border-2 border-slate-800 bg-[#f6c1cd] px-5 py-2 text-sm font-semibold"
+              className="rounded-full border-2 border-white bg-[#f6c1cd] px-5 py-2 text-sm font-semibold"
             >
               Send
             </button>

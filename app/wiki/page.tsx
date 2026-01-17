@@ -3,24 +3,20 @@ import WikiToc from "../components/WikiToc";
 
 export default function WikiPage() {
   return (
-    <div className="min-h-screen bg-[#fff7fb] text-[#e25573]">
+    <div className="min-h-screen bg-white text-[#e25573]">
       <SiteHeader className="bg-[#ffb7d4]" />
-      <main className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-8 lg:grid-cols-[220px_minmax(0,1fr)]">
-          <div className="hidden lg:block">
-            <div className="sticky top-24">
-              <WikiToc />
-            </div>
-          </div>
-          <div className="w-full max-w-3xl justify-self-center space-y-10 text-center">
+      <main className="mx-auto max-w-screen-2xl px-6 py-14">
+        <div className="grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)_220px]">
+          <div className="hidden lg:block" />
+          <div className="mx-auto w-full max-w-6xl space-y-10 text-center lg:justify-self-center">
             <header className="rounded-3xl border border-[#f7aac7] bg-white px-8 py-10 text-center shadow-[0_12px_24px_rgba(226,85,115,0.15)]">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#e25573]/70">
                 Wiki dậy thì
               </p>
-              <h1 className="mt-4 text-2xl font-noto-black uppercase tracking-wide text-[#e25573] md:text-3xl">
+              <h1 className="mt-4 text-3xl font-noto-black uppercase tracking-wide text-[#e25573] md:text-4xl">
                 CẨM NANG THẤU HIỂU CƠ THỂ VÀ CHĂM SÓC LÀN DA THEO CHU KỲ KINH NGUYỆT
               </h1>
-              <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-[#e25573]/80">
+              <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-[#e25573]/85 md:text-lg">
                 Kinh nguyệt không đơn thuần là một hiện tượng sinh lý hàng tháng,
                 đó là tín hiệu thiêng liêng báo hiệu sự trưởng thành và khả năng
                 thiên phú của người phụ nữ. Việc thấu hiểu tường tận các giai
@@ -32,7 +28,7 @@ export default function WikiPage() {
 
             <section
               id="phan-1"
-              className="rounded-2xl border border-[#f7aac7] bg-white px-7 py-6 text-sm leading-relaxed shadow-[0_8px_18px_rgba(226,85,115,0.12)]"
+              className="rounded-2xl border border-[#f7aac7] bg-white px-7 py-6 text-base leading-relaxed shadow-[0_8px_18px_rgba(226,85,115,0.12)] md:text-lg"
             >
               <h2 className="text-base font-noto-black uppercase">
             PHẦN 1: THẤU HIỂU BỐN GIAI ĐOẠN CỦA CƠ THỂ
@@ -75,7 +71,7 @@ export default function WikiPage() {
 
             <section
               id="phan-2"
-              className="rounded-2xl border border-[#f7aac7] bg-white px-7 py-6 text-sm leading-relaxed shadow-[0_8px_18px_rgba(226,85,115,0.12)]"
+              className="rounded-2xl border border-[#f7aac7] bg-white px-7 py-6 text-base leading-relaxed shadow-[0_8px_18px_rgba(226,85,115,0.12)] md:text-lg"
             >
               <h2 className="text-base font-noto-black uppercase">
             PHẦN 2: NGHỆ THUẬT CHĂM SÓC DA THEO NHỊP ĐIỆU HORMONE
@@ -140,7 +136,7 @@ export default function WikiPage() {
 
             <section
               id="phan-3"
-              className="rounded-2xl border border-[#f7aac7] bg-white px-7 py-6 text-sm leading-relaxed shadow-[0_8px_18px_rgba(226,85,115,0.12)]"
+              className="rounded-2xl border border-[#f7aac7] bg-white px-7 py-6 text-base leading-relaxed shadow-[0_8px_18px_rgba(226,85,115,0.12)] md:text-lg"
             >
               <h2 className="text-base font-noto-black uppercase">
             PHẦN 3: ĐỐI PHÓ VỚI NHỮNG KHÓ CHỊU THƯỜNG GẶP
@@ -169,6 +165,11 @@ export default function WikiPage() {
             chế độ ăn giàu dinh dưỡng để cơ thể nhanh chóng hồi phục.
           </p>
             </section>
+          </div>
+          <div className="hidden lg:block lg:justify-self-end">
+            <div className="sticky top-24">
+              <WikiToc />
+            </div>
           </div>
         </div>
       </main>

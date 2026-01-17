@@ -165,7 +165,7 @@ export default function Home() {
                   alt="Trò chuyện với Olivia ngay"
                   width={320}
                   height={96}
-                  className="h-14 w-auto md:h-16"
+                  className="h-14 w-auto md:h-16 scale-[3] translate-y-[400px]"
                 />
               </Link>
             </div>
